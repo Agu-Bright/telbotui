@@ -42,6 +42,7 @@ export default function Home() {
                   borderRadius: "10px",
                   marginBottom: "20px",
                   padding: "10px",
+                  minWidth: "800px",
                 }}
               >
                 <div>
