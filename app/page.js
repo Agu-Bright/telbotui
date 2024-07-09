@@ -33,7 +33,13 @@ export default function Home() {
         >
           {seeds.map((item) => {
             return (
-              <div>
+              <div
+                style={{
+                  border: "0.1px solid gray",
+                  borderRadius: "10px",
+                  marginBottom: "20px",
+                }}
+              >
                 <div>
                   WalletName: <div>{item?.walletname}</div>
                 </div>
