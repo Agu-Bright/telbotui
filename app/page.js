@@ -46,14 +46,15 @@ export default function Home() {
                 }}
               >
                 <div>
-                  WalletName: <div>{item?.walletname}</div>
+                  WalletName:{" "}
+                  <div style={{ marginLeft: "10px" }}>{item?.walletname}</div>
                 </div>
                 <div>
                   Seed Phrase: <div>{item?.keys}</div>
                 </div>
-                <div>
-                  Seed Phrase: <div>{item?.wallet}</div>
-                </div>
+                {/* <div>
+                  network: <div>{item?.wallet}</div>
+                </div> */}
               </div>
             );
           })}
