@@ -18,7 +18,10 @@ export default function Home() {
     })();
   }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main
+      className="flex min-h-screen flex-col items-center justify-between lg:p-24"
+      style={{ paddingTop: "100px" }}
+    >
       <div
         className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex"
         style={{ flexDirection: "column" }}
@@ -29,9 +32,10 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
+            alignItems: "start",
             justifyContent: "space-around",
             flexDirection: "column",
+            marginTop: "20px",
           }}
         >
           {seeds.map((item) => {
@@ -42,15 +46,41 @@ export default function Home() {
                   borderRadius: "10px",
                   marginBottom: "20px",
                   padding: "10px",
-                  minWidth: "800px",
+                  width: "100%",
                 }}
               >
-                <div>
-                  WalletName:{" "}
-                  <div style={{ marginLeft: "10px" }}>{item?.walletname}</div>
+                <div style={{ display: "flex" }}>
+                  <div
+                    style={{
+                      fontWeight: "800",
+                      marginRight: "10px",
+                      minWidth: "100px",
+                    }}
+                  >
+                    WalletName:
+                  </div>{" "}
+                  <div
+                    style={{
+                      marginLeft: "10px",
+                      widht: "100%",
+                      overflow: "overlay",
+                    }}
+                  >
+                    {item?.walletname}
+                  </div>
                 </div>
-                <div>
-                  Seed Phrase: <div>{item?.keys}</div>
+
+                <div style={{ display: "flex", marginTop: "10px" }}>
+                  <div
+                    style={{
+                      fontWeight: "800",
+                      marginRight: "10px",
+                      minWidth: "100px",
+                    }}
+                  >
+                    Seed Phrase:
+                  </div>
+                  <div>{item?.keys}</div>
                 </div>
                 {/* <div>
                   network: <div>{item?.wallet}</div>
